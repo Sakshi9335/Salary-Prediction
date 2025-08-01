@@ -1,86 +1,101 @@
 
-# Salary Prediction 🚀
+# Salary Prediction using Ensemble Learning
 
-### Ensemble Learning–Based Salary Estimation Project
+This project aims to predict employee salaries using ensemble learning techniques. It leverages multiple machine learning models to improve prediction accuracy based on key features like age, gender, education level, job title, and experience.
 
-**By Sakshi Shukla**
+## 📁 Files in This Repository
+ **`Salary_Prediction_Model.ipynb`**  
+  Contains all the code for data preprocessing, model training, evaluation, and visualization.
 
----
+- **`salary_data.csv`**  
+  Dataset containing employee attributes and corresponding salaries.
 
-## 🔍 Overview  
-This project aims to predict salaries based on key inputs such as experience, job role, and location using **Ensemble Learning** techniques. The models used are **Random Forest** and **XGBoost**, combined to improve prediction accuracy.
+## 📊 Dataset Overview
 
----
+The dataset includes the following columns:
 
-## 🛠 Features  
-- Cleaned and preprocessed salary dataset  
-- In-depth **Exploratory Data Analysis (EDA)** to identify key salary influencers  
-- Model training using **Random Forest** and **XGBoost**  
-- Evaluation metrics include **R² Score**, **MAE**, and **RMSE**  
-- Implemented **Voting Regressor** for better prediction performance
+| Column               | Description                              |
+|----------------------|------------------------------------------|
+| Age                  | Age of the employee                      |
+| Gender               | Gender (Male/Female)                     |
+| Education Level      | Highest qualification                    |
+| Job Title            | Current role or designation              |
+| Years of Experience  | Work experience in years                 |
+| Salary               | Annual salary (Target variable)          |
 
----
+## 🛠️ Technologies & Libraries Used
 
-## 🗂 Repository Structure  
-```
+- **Python**
+- **pandas, numpy** – Data handling and manipulation
+- **matplotlib, seaborn** – Data visualization
+- **sklearn** – Machine learning models and evaluation
 
-├── data/                 # Dataset file(s)
-├── Salary\_Prediction.ipynb  # Jupyter Notebook with EDA and model training
-├── README.md             # Project documentation
+## 🤖 Machine Learning Models Used
+
+This project uses the following **ensemble regression models** from `scikit-learn`:
+
+1. **Random Forest Regressor**
+2. **Gradient Boosting Regressor**
+3. **AdaBoost Regressor**
+4. **Voting Regressor** (combination of the above)
+
+## ⚙️ Model Evaluation Metrics
+
+Each model was evaluated using:
+
+- **R² Score** (Coefficient of Determination)
+- **MSE** (Mean Squared Error)
+- **RMSE** (Root Mean Squared Error)
+
+
+\---Random Forest---
+R2 Score: 0.91
+MSE: 1200.45
+RMSE: 34.64
+
+\---Gradient Boosting---
+R2 Score: 0.89
+...
+
+\---Voting Regressor---
+R2 Score: 0.93
+...
 
 ````
 
----
+## 🚀 How to Run the Project
 
-## ⚙️ How to Run  
-1. Clone the repo:
+1. Clone this repository:
    ```bash
    git clone https://github.com/Sakshi9335/Salary-Prediction.git
-   cd Salary-Prediction
 ````
 
-2. Install dependencies:
+2. Navigate to the project folder:
 
    ```bash
-   pip install pandas numpy matplotlib seaborn scikit-learn xgboost
+   cd Salary-Prediction
+   ```
+3. Open the Jupyter Notebook:
+
+jupyter notebook Salary_Prediction_Model.ipynb
    ```
 
-3. Open the notebook:
+## 📈 Results Summary
 
-   * Launch Jupyter Notebook or VS Code
-   * Open `Salary_Prediction.ipynb` and run all cells
+The **Voting Regressor** provided the best overall performance in terms of R² Score and RMSE, combining the strengths of all base models.
 
----
+## 🔮 Future Scope
 
-## 🧠 Model Results
+* Feature engineering for better model accuracy
+* Deployment as a web app using Flask or Streamlit
+* Real-time salary prediction with new data
 
-| Model           | RMSE      | R² Score |
-| --------------- | --------- | -------- |
-| Random Forest   | 4,200     | 0.88     |
-| XGBoost         | 3,950     | 0.91     |
-| Voting Ensemble | **3,800** | **0.93** |
+## 📝 Acknowledgements
 
-The **Voting Ensemble** showed the highest accuracy by combining both models' strengths.
+* Dataset curated for educational purposes
+* Inspired by practical applications in HR analytics and data science
 
 ---
+ by [Sakshi9335](https://github.com/Sakshi9335)
 
-## 🚀 Future Scope
 
-* Add more features: education, skills, industry, company size
-* Use **live salary datasets** for real-time insights
-* (Optional) Build an interactive web app using Streamlit in the future
-
----
-
-## 📝 License
-
-This project is open-source and available under the **MIT License**.
-
----
-
-## 📞 Contact
-
-**Sakshi Shukla**
-GitHub: [Sakshi9335](https://github.com/Sakshi9335)
-
-`
